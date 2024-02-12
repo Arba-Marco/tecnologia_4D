@@ -1,4 +1,19 @@
-<h2>richiesta <base href=""></h2>
+<h2>richiesta</h2>
 <button type="button" (click)="makeRequest()">fai la richiesta</button>
 <div *ngIf="loading">loading...</div>
 <pre>{{data | json}}</pre>
+<hr>
+<button type="button" (click)="makeCompactPost()">fai il post</button>
+<hr>
+<button type="button" (click)="makeTypedRequest()">fai la richiesta</button>
+
+<!--Uso un ciclo for per scandire tutta la lista di articoli-->
+
+<div *ngFor="let art of fooData">
+    <h3>{{art.title}}</h3>
+    <b>post {{art.id}} di utente #: {{art.userId}}</b>
+    <div>
+        {{art.body}}
+    </div>
+    <hr>
+</div>
