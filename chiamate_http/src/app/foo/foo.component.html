@@ -1,0 +1,4 @@
+<h2>richiesta <base href=""></h2>
+<button type="button" (click)="makeRequest()">fai la richiesta</button>
+<div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>
